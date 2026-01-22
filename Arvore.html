@@ -1,1 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Árvore de Natal</title>
 
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .arvore{
+            text-align: center;
+            font-size: 50px;
+            line-height: 1.2;
+        }
+
+        .triangulo{
+            color: green;
+        }
+
+        .circulo{
+            color: red;
+        }
+
+        .tronco{
+            color: brown;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="arvore">
+        <!-- Topo -->
+        <div class="triangulo">▲</div>
+        <div class="circulo">●</div>
+
+        <!-- Meio -->
+        <div class="triangulo">▲ ▲</div>
+        <div class="circulo">● ●</div>
+
+        <!-- Base -->
+        <div class="triangulo">▲ ▲ ▲</div>
+        <div class="circulo">● ● ●</div>
+
+        <!-- Tronco -->
+        <div class="tronco">█</div>
+        <div class="tronco">█</div>
+    </div>
+
+</body>
+</html>
