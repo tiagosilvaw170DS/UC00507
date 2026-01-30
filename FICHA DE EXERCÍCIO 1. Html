@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <title>Página Pessoal</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            text-align: center;
+            padding: 40px;
+        }
+
+        h1 {
+            color: #333333;
+        }
+
+        img {
+            width: 200px;
+            border-radius: 10px;
+            margin: 20px 0;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        footer {
+            margin-top: 40px;
+            color: #777777;
+            font-size: 14px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Tiago Silva</h1>
+
+    <p>
+        Olá, o meu nome é Tiago Silva e estou a aprender HTML e CSS.
+    </p>
+
+    <img src="https://via.placeholder.com/200" alt="Imagem de perfil">
+
+    <h2>Os meus hobbies</h2>
+
+    <ul>
+        <li>Editar vídeos</li>
+        <li>Ouvir música</li>
+        <li>Praticar exercício físico</li>
+    </ul>
+
+    <footer>
+        <p>© 2026</p>
+    </footer>
+
+</body>
+</html>
