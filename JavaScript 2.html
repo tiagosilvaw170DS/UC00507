@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="UTF-8">
+<title>Exercício JavaScript</title>
+
+<style>
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    padding: 50px;
+    background-color: #f2f2f2;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+</style>
+
+</head>
+<body>
+
+<h1> Conteúdo Alterado de JavaScript</h1>
+
+<p id="texto">
+Bem-vindo à minha página de Horror.
+</p>
+
+<button onclick="mudarMensagem()">
+Mensagem de Horror
+</button>
+
+<script>
+function mudarMensagem() {
+    document.getElementById("texto").innerHTML =
+    "A mensagem foi atualizada com sucesso!";
+}
+</script>
+
+</body>
+</html>
