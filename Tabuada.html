@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="UTF-8">
+<title>Gerador de Tabuada</title>
+
+<style>
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    padding: 50px;
+}
+
+input {
+    padding: 8px;
+    font-size: 16px;
+    width: 100px;
+}
+
+button {
+    padding: 8px 15px;
+    font-size: 16px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+#resultado {
+    margin-top: 20px;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+#resultado ul {
+    list-style: none;
+    padding: 0;
+}
+
+#resultado li {
+    padding: 4px 0;
+}
+
+/* Destacar resultados pares */
+.par {
+    color: blue;
+}
+</style>
+
+</head>
+<body>
+
+<h1>Gerador de Tabuada</h1>
+
+<input type="number" id="numero" placeholder="Número">
+
+<button onclick="gerarTabuada()">
+Gerar Tabuada
+</button>
+
+<div id="resultado"></div>
+
+<script>
+function gerarTabuada() {
+    let numero = document.getElementById("numero").value;
+    numero = Number(numero);
+    let resultado = document.getElementById("resultado");
+
+    // Validação do campo
+    if (numero === 0 && document.getElementById("numero").value === "") {
+        resultado.innerHTML = "Por favor insere um número válido.";
+        return;
+    }
+
+    // Limpar tabuada anterior
+    let lista = "<ul>";
+
+    for (let i = 1; i <= 10; i++) {
+        let produto = numero * i;
+        let classe = (produto % 2 === 0) ? "par" : "";
+        lista += "<li class='" + classe + "'>" + numero + " x " + i + " = " + produto + "</li>";
+    }
+
+    lista += "</ul>";
+    resultado.innerHTML = lista;
+}
+</script>
+
+</body>
+</html>
