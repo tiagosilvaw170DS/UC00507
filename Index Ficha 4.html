@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Navbar Responsiva</title>
+
+<style>
+
+/* Reset simples */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Barra superior */
+.topbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 20px;
+    background-color: #222;
+    color: #fff;
+    position: relative;
+}
+
+.logo {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+/* Menu (desktop) */
+.nav-list {
+    list-style: none;
+    display: flex;
+    gap: 18px;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-list a {
+    color: #fff;
+    text-decoration: none;
+    padding: 8px 10px;
+    border-radius: 6px;
+}
+
+.nav-list a:hover {
+    background-color: rgba(255, 255, 255, 0.12);
+}
+
+/* Botão menu (mobile) — escondido por defeito */
+.menu-btn {
+    display: none;
+    cursor: pointer;
+    user-select: none;
+    padding: 8px 10px;
+    border-radius: 6px;
+    background-color: rgba(255,255,255,0.12);
+}
+
+/* Checkbox escondido */
+.menu-toggle {
+    display: none;
+}
+
+/* Conteúdo */
+.conteudo {
+    padding: 30px 20px;
+}
+
+/* MOBILE: até 768px */
+@media (max-width: 768px) {
+
+    /* 1) Mostrar botão Menu */
+    .menu-btn {
+        display: inline-block;
+    }
+
+    /* 2) Menu passa a vertical e escondido */
+    .nav {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 60px;
+        background-color: #222;
+        padding: 10px 20px;
+        display: none;
+    }
+
+    .nav-list {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    /* 3) Quando o checkbox está checked, mostrar menu */
+    .menu-toggle:checked ~ .nav {
+        display: block;
+    }
+}
+
+</style>
+
+</head>
+<body>
+
+<header class="topbar">
+    <div class="logo">MeuSite</div>
+
+    <input type="checkbox" id="menu-toggle" class="menu-toggle">
+
+    <label for="menu-toggle" class="menu-btn">
+        ☰ Menu
+    </label>
+
+    <nav class="nav">
+        <ul class="nav-list">
+            <li><a href="#">Início</a></li>
+            <li><a href="#">Serviços</a></li>
+            <li><a href="#">Portefólio</a></li>
+            <li><a href="#">Contactos</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main class="conteudo">
+    <h1>Página de Exemplo</h1>
+    <p>Redimensiona o ecrã para testar a navbar em modo desktop e mobile.</p>
+</main>
+
+</body>
+</html>
