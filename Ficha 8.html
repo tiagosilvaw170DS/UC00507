@@ -1,80 +1,32 @@
 <!DOCTYPE html>
-<html lang="pt">
+<html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>Condições de idade</title>
-
-<style>
-body {
-    font-family: Arial, sans-serif;
-    text-align: center;
-    padding: 50px;
-}
-
-input {
-    padding: 8px;
-    font-size: 16px;
-    width: 120px;
-}
-
-button {
-    padding: 8px 15px;
-    font-size: 16px;
-    margin-left: 10px;
-    cursor: pointer;
-}
-
-#resultado {
-    margin-top: 20px;
-    font-weight: bold;
-    font-size: 18px;
-}
-</style>
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Condições</title>
 </head>
 <body>
+    <h1>Verificar idade</h1>
 
-<h1>Verificação de Idade</h1>
+    <input type="number" id="idade" placeholder="Idade">
 
-<input type="number" id="idade" placeholder="Idade">
+    <button onclick="verificarIdade()">Verificar</button>
 
-<button onclick="verificar()">
-Verificar
-</button>
+    <p id="res"></p>
 
-<p id="resultado"></p>
-
-<script>
-function verificar() {
-
-    let idade = document.getElementById("idade").value;
-    idade = Number(idade);
-
-    let resultado = document.getElementById("resultado");
-
-    if (idade === 0 && document.getElementById("idade").value === "") {
-        resultado.innerHTML = "Por favor insere uma idade válida.";
-        resultado.style.color = "black";
-    }
-    else if (idade < 0) {
-        resultado.innerHTML = "Idade inválida.";
-        resultado.style.color = "orange";
-    }
-    else if (idade < 18) {
-        resultado.innerHTML = "És menor de idade.";
-        resultado.style.color = "red";
-    }
-    else if (idade === 18) {
-        resultado.innerHTML = "Tens exatamente 18 anos!";
-        resultado.style.color = "blue";
-    }
-    else {
-        resultado.innerHTML = "És maior de idade.";
-        resultado.style.color = "green";
-    }
-
-}
-</script>
-
+    <script>
+        function verificarIdade(){
+            let msg="";
+            let idade = document.getElementById("idade").value;
+            idade = Number(idade); //converte a idade em numero
+            if (idade<18){
+                msg= "És menor de idade, vai embora!";
+            }else{
+                msg= "És maior, vai embora na mesma!";
+            }
+            let res=document.getElementById("res");
+            res.innerHTML=msg;
+        }
+    </script>
 </body>
 </html>
