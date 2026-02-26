@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="UTF-8">
+<title>Welcom to JavaScript</title>
+
+<style>
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    padding: 50px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+</style>
+
+</head>
+<body>
+
+<h1>Primeiro Exercício JavaScript</h1>
+
+<p id="mensagem">
+Welcom.
+</p>
+
+<button onclick="alterarTexto()">
+Clicar aqui
+</button>
+
+<script>
+function alterarTexto() {
+    document.getElementById("mensagem").innerHTML =
+    "O texto foi alterado com JavaScript!";
+}
+</script>
+
+</body>
+</html>
