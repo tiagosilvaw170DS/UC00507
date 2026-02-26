@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ficha 5 - Cards Responsivos - Tiago Silva</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+        }
+
+        .topo {
+            padding: 30px 20px;
+            text-align: center;
+            background-color: #222;
+            color: #fff;
+        }
+
+        .conteudo {
+            max-width: 1000px;
+            margin: 30px auto;
+            padding: 0 20px;
+        }
+
+        /* GRID BASE (mobile first) */
+        .grid {
+            display: grid;
+            gap: 20px;
+            grid-template-columns: 1fr;
+        }
+
+        /* CARD */
+        .card {
+            background-color: #fff;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+        }
+
+        .card h2 {
+            margin-top: 0;
+        }
+
+        .card p {
+            color: #555;
+        }
+
+        /* BOTÃO */
+        .btn {
+            display: inline-block;
+            margin-top: 10px;
+            text-decoration: none;
+            padding: 10px 14px;
+            border-radius: 6px;
+            background-color: #222;
+            color: #fff;
+        }
+
+        .btn:hover {
+            opacity: 0.85;
+        }
+
+        /* Até 600px: 1 coluna */
+        @media (max-width: 600px) {
+            .grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* 601px a 1024px: 2 colunas */
+        @media (min-width: 601px) and (max-width: 1024px) {
+            .grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        /* A partir de 1025px: 3 colunas */
+        @media (min-width: 1025px) {
+            .grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+    </style>
+
+</head>
+<body>
+
+    <header class="topo">
+        <h1>Portefólio / Projetos</h1>
+        <p>Exemplo de cards responsivos com CSS Grid e media queries.</p>
+        <h3>Tiago Silva</h3>
+    </header>
+
+    <main class="conteudo">
+        <section class="grid" aria-label="Lista de cards">
+
+            <article class="card">
+                <h2>Projeto 1</h2>
+                <p>Descrição curta do projeto.</p>
+                <a class="btn" href="#">Ver mais</a>
+            </article>
+
+            <article class="card">
+                <h2>Projeto 2</h2>
+                <p>Descrição curta do projeto.</p>
+                <a class="btn" href="#">Ver mais</a>
+            </article>
+
+            <article class="card">
+                <h2>Projeto 3</h2>
+                <p>Descrição curta do projeto.</p>
+                <a class="btn" href="#">Ver mais</a>
+            </article>
+
+            <article class="card">
+                <h2>Projeto 4</h2>
+                <p>Descrição curta do projeto.</p>
+                <a class="btn" href="#">Ver mais</a>
+            </article>
+
+            <article class="card">
+                <h2>Projeto 5</h2>
+                <p>Descrição curta do projeto.</p>
+                <a class="btn" href="#">Ver mais</a>
+            </article>
+
+            <article class="card">
+                <h2>Projeto 6</h2>
+                <p>Descrição curta do projeto.</p>
+                <a class="btn" href="#">Ver mais</a>
+            </article>
+
+        </section>
+    </main>
+
+</body>
+</html>
