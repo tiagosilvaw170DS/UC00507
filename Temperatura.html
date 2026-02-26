@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Verificador de Temperatura</title>
+
+<style>
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    padding: 50px;
+}
+
+input {
+    padding: 8px;
+    font-size: 16px;
+    width: 150px;
+}
+
+button {
+    padding: 8px 15px;
+    font-size: 16px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+#resultado {
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: bold;
+}
+</style>
+
+</head>
+<body>
+
+<h1>Verificador de Temperatura</h1>
+
+<input type="text" id="temperatura" placeholder="Temperatura em °C">
+
+<button onclick="verificarTemperatura()">
+Verificar
+</button>
+
+<p id="resultado"></p>
+
+<script>
+
+function verificarTemperatura() {
+
+    let temp = document.getElementById("temperatura").value;
+    let resultado = document.getElementById("resultado");
+
+    // 🔹 Campo vazio
+    if (temp === "") {
+        resultado.innerHTML = "Por favor, insere uma temperatura válida.";
+        resultado.style.color = "orange";
+        return;
+    }
+
+    // Converter para número
+    temp = Number(temp);
+
+    // 🔹 Verificar se não é número
+    if (isNaN(temp)) {
+        resultado.innerHTML = "Por favor, insere uma temperatura válida.";
+        resultado.style.color = "orange";
+    }
+
+    // 🔹 Está frio
+    else if (temp < 10) {
+        resultado.innerHTML = "Está frio.";
+        resultado.style.color = "blue";
+    }
+
+    // 🔹 Está agradável (10 a 24 inclusive)
+    else if (temp >= 10 && temp <= 24) {
+        resultado.innerHTML = "Está agradável.";
+        resultado.style.color = "green";
+    }
+
+    // 🔹 Está calor
+    else {
+        resultado.innerHTML = "Está calor.";
+        resultado.style.color = "red";
+    }
+
+}
+
+</script>
+
+</body>
+</html>
